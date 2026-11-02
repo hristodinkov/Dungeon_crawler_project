@@ -1,11 +1,16 @@
 # Dungeon Crawler
 
-This project is a modular, event‑driven gameplay framework built in Unity, designed to demonstrate clean architecture and scalable AI behavior. It uses a fully extensible ***Finite State Machine (FSM)*** system combined with a shared ***Blackboard*** to drive intelligent enemy behavior, enabling Skeletons, Mages, and Dragons to react dynamically and transition through complex, multi‑phase combat patterns. Core gameplay systems communicate through a global ***EventBus***, allowing XP, quests, loot, UI, and spawners to respond to events without direct dependencies. All gameplay data like enemies, items, and damage types is defined through ***ScriptableObjects***, while UI and visual feedback rely on the ***Observer pattern*** to react automatically to player and enemy events. The inventory system uses ***Factory*** pattern for item usage.
+This is my own Unity game, that I am still working on. I made it so I can explore design patterns in coding.  
+
+The enemies (Skeletons, Mages and Dragons) are controlled by my own ***Finite State Machine (FSM)*** with a shared ***Blackboard***. With it, an enemy can react to the player and move between different states, and the Dragon even has two phases in its fight.
+
+The systems in the game don't depend on each other directly. They talk through a global ***EventBus***, so XP, quests, loot, UI and spawners just listen to the events they need. All the game data, like enemies, items and damage types, is made with ***ScriptableObjects***. The UI uses the ***Observer pattern*** to update automatically when something happens to the player or an enemy, and the inventory uses the ***Factory pattern*** for using items.
 
 ## Preview
-<img src="dungeon.png" width="600" height="600">
+<img src="https://github.com/hristodinkov/Dungeon_crawler_project/blob/main/dungeon_enemies.gif" width="600" height="600">
+<img src="https://github.com/hristodinkov/Dungeon_crawler_project/blob/main/DragonShowcase.gif" width="600" height="600">
 
-## Design patterns breakdown
+## Design patterns that I used in this project
 
 ### 1. Finite State Machine (FSM) 
 A modular system that drives all enemy behavior.
@@ -122,4 +127,6 @@ Progression systems react to events rather than polling:
 This keeps gameplay logic clean and reactive.
 
 ## Fututre Improvements
+- Change placeholder assets
+- Sync the animation and attack cycles
 - Combine this project with my dungeon generation project(https://github.com/hristodinkov/DungeonGenerator)
