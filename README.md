@@ -126,7 +126,7 @@ Progression systems react to events rather than polling:
 
 This keeps gameplay logic clean and reactive.
 
-## Fututre Improvements
+## Future Improvements
 - Change placeholder assets
 - Sync the animation and attack cycles
-- Combine this project with my dungeon generation project(https://github.com/hristodinkov/DungeonGenerator)
+- Combine this project with my [dungeon generator](https://github.com/hristodinkov/DungeonGenerator) project
